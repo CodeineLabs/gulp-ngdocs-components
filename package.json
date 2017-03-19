@@ -1,6 +1,6 @@
 {
   "name": "gulp-ngdocs-components",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "m-sanchez",
   "description": "gulp plugin for angularjs documentation",
   "main": "index",
