@@ -2,6 +2,7 @@ gulp-ngdocs-components
 ===========
 
 Gulp plugin for building [AngularJS](http://docs.angularjs.org) like documentation. This is inspired from [grunt-ngdocs](https://www.npmjs.org/package/grunt-ngdocs).
+This plugin supports angular 1.x components.
 
 ## Setup
 
