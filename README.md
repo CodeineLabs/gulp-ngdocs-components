@@ -3,11 +3,11 @@ gulp-ngdocs-components
 
 Gulp plugin for building [AngularJS](http://docs.angularjs.org) like documentation. This is inspired from [grunt-ngdocs](https://www.npmjs.org/package/grunt-ngdocs).
 
-##Setup
+## Setup
 
 `npm install gulp-ngdocs-components --save-dev`
 
-##Usage
+## Usage
 
 Create a `ngdocs` gulp task
 
@@ -112,7 +112,7 @@ var connect = require('gulp-connect');
 });
 ```
 
-###Doc comment example
+### Doc comment example
 
    A doc comment looks like this:
    ```js
@@ -139,7 +139,7 @@ var connect = require('gulp-connect');
      //some nice code
    });
    ```
-###This fork of gulp-ngdocs supports .components()
+### This fork of gulp-ngdocs supports .components()
 
 In addition to controllers, services, direcives… now support components:
 ```js
@@ -157,9 +157,9 @@ In addition to controllers, services, direcives… now support components:
 Check out the [Writing AngularJS documentation wiki article](https://github.com/angular/angular.js/wiki/Writing-AngularJS-Documentation) to see what's possible,
 or take a look at the [AngularJS source code](https://github.com/angular/angular.js/tree/master/src/ng) for more examples.
 
-##Options
+## Options
 
-####scripts
+#### scripts
 Set additional custom JS files are loaded to the app. This allows the live examples to use custom directives, services, etc. The documentation app works with AngularJS 1.2+ and 1.3+. If you include a different version of AngularJS, make sure to include angular-animate.js as well.
 
 Possible values:
@@ -168,11 +168,11 @@ Possible values:
   - `['http://example.com/file.js', 'https://example.com/file.js', '//example.com/file.js']` reference remote files (eg from a CDN)
   - `['../app.js']` reference file relative to the dest folder
 
-####styles
+#### styles
 [default] `[]`
 Copy additional css files to the documentation app
 
-####analytics
+#### analytics
 Optional include Google Analytics in the documentation app.
 
 Example usage:
@@ -186,42 +186,42 @@ var opts = {
 };
 ```
 
-####discussions
+#### discussions
 Optional include [discussions](http://disqus.com) in the documentation app.
 
-####editExample
+#### editExample
 [default] `true`
 Show Edit Button for examples.
 
-####title
+#### title
 [default] `"API Documentation"`
 Title to put on the navbar and the page's `title` attribute.
 
-####startPage
+#### startPage
 [default] `'/api'`
 Set first page to open.
 
-####html5Mode
+#### html5Mode
 [default] `true`
 Whether or not to enable `html5Mode` in the docs application.  If true, then links will be absolute.  If false, they will be prefixed by `#/`.
 
-####image
+#### image
 A URL or relative path to an image file to use in the top navbar.
 
-####titleLink
+#### titleLink
 [default] no anchor tag is used
 Wraps the title text in an anchor tag with the provided URL.
 
-####imageLink
+#### imageLink
 [default] no anchor tag is used
 Wraps the navbar image in an anchor tag with the provided URL.
 
-####bestMatch
+#### bestMatch
 [default] `false`
 The best matching page for a search query is highlighted and get selected on return.
 If this option is set to true the best match is shown below the search field in an dropdown menu. Use this for long lists where the highlight is often not visible.
 
-####navTemplate
+#### navTemplate
 [default] `null`
 Path to a template of a nav HTML template to include.  The css for it
 should be that of listitems inside a bootstrap navbar:
@@ -239,7 +239,7 @@ Example: 'templates/my-nav.html'
 
 The template, if specified, is pre-processed using [_.template](http://lodash.com/docs#template).
 
-####loadDefaults
+#### loadDefaults
 Use this option to disable any of the four scripts `angular`, `angularAnimate`, `marked`, and `prettify` (google) which are loaded by default. This would give the user the ability to disable any scripts if they are using methods outside of regular angular/animate loading like browserify.
 
 Example usage:
@@ -251,16 +251,16 @@ var opts = {
 }
 ```
 
-##Options for Sections
+## Options for Sections
 
-####glob
+#### glob
 
 [required] glob pattern of files to parse for documentation comments.
 
-###title
+### title
 
 [default] name of the section. Set the title for the section in the documentation app.
 
-###api
+### api
 
 [default] `true` Set the name for the section in the documentation app.
