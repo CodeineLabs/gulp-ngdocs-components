@@ -253,7 +253,7 @@ var opts = {
 
 ## Options for Sections
 
-#### glob
+### glob
 
 [required] glob pattern of files to parse for documentation comments.
 
