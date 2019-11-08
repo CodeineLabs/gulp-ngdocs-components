@@ -24,7 +24,7 @@
     "canonical-path": "0.0.2",
     "extend": "1.3.0",
     "lodash": "4.17.15",
-    "marked": "0.3.2",
+    "marked": "0.7.0",
     "merge-stream": "0.1.5",
     "path": "0.4.9",
     "plugin-error": "^1.0.1",
