@@ -142,7 +142,7 @@ function processDoc(opts) {
 
   function writeSetup() {
     var options = setup.__options,
-        content, data = {
+        content,contentTemplate,contentCompiler, data = {
           scripts: options.scripts,
           styles: options.styles,
           sections: _.keys(setup.sections).join('|'),
@@ -162,13 +162,14 @@ function processDoc(opts) {
     if (options.template && path.resolve(options.template)) {
       index = options.template;
     }
-    content = fs.readFileSync(index, 'utf8');
-    content = _.template(content, data);
+    contentTemplate = fs.readFileSync(index, 'utf8');
+    contentCompiler = _.template(contentTemplate);
+    content = contentCompiler(data);
     docsStream.push(new File({
       base: fakeDest,
       cwd: fakeDest,
       path: path.join(fakeDest, 'index.html'),
-      contents: new Buffer(content, 'utf8')
+      contents: new Buffer.from(content, 'utf8')
     }));
     // create setup file
     setup.html5Mode = options.html5Mode;
@@ -180,7 +181,7 @@ function processDoc(opts) {
       base: fakeDest,
       cwd: fakeDest,
       path: setup.__file,
-      contents: new Buffer('NG_DOCS=' + JSON.stringify(setup, null, 2) + ';', 'utf8')
+      contents: new Buffer.from('NG_DOCS=' + JSON.stringify(setup, null, 2) + ';', 'utf8')
     }));
   }
 
